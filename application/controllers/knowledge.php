@@ -27,10 +27,11 @@ class Knowledge extends CI_Controller {
         $this->load->view('knowledge/listing', $data);
     }
 
-    public function edit()
+    public function edit($id)
     {
         $data['action'] = "knowledge/editAction";
-        //$data['knowledge'] =
+        $data['knowledge'] = $this->knowledge_model->findById($id);
+        $this->load->view('knowledge/create', $data);
     }
 
     public function createAction() {

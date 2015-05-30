@@ -45,12 +45,12 @@ $this->load->view('_inc/header');
                     <td><?= $k->getName(); ?></td>
                     <td><?= $k->getDescription(); ?></td>
                     <td>
-                        <a href="<?php echo base_url()."index.php/knowledge/edit".$k->getId(); ?>">
+                        <a href="<?php echo base_url()."index.php/knowledge/edit/".$k->getId(); ?>">
                             <i class="mdi-content-create" title="Editar"></i>
                         </a>
                     </td>
                     <td>
-                        <a href="<?php echo base_url()."index.php/knowledge/deleteAction".$k->getId(); ?>">
+                        <a href="<?php echo base_url()."index.php/knowledge/deleteAction/".$k->getId(); ?>">
                             <i class="mdi-content-clear" title="Deletar"></i>
                         </a>
                     </td>

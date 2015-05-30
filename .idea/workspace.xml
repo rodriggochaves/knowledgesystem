@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6a7c685f-e505-413d-8f03-cae3dd94ee26" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/knowledge/create.php" afterPath="$PROJECT_DIR$/application/views/knowledge/create.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/_inc/footer.php" afterPath="$PROJECT_DIR$/application/views/_inc/footer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/_inc/header.php" afterPath="$PROJECT_DIR$/application/views/_inc/header.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/knowledge.php" afterPath="$PROJECT_DIR$/application/controllers/knowledge.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/knowledge_model.php" afterPath="$PROJECT_DIR$/application/models/knowledge_model.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/knowledge/listing.php" afterPath="$PROJECT_DIR$/application/views/knowledge/listing.php" />
@@ -33,21 +31,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="create.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/knowledge/create.php">
+      <file leaf-file-name="knowledge.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/knowledge.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.375" vertical-offset="0" max-vertical-offset="540">
-              <caret line="28" column="82" selection-start-line="28" selection-start-column="82" selection-end-line="28" selection-end-column="82" />
-              <folding />
+            <state vertical-scroll-proportion="-16.875" vertical-offset="0" max-vertical-offset="675">
+              <caret line="32" column="67" selection-start-line="32" selection-start-column="67" selection-end-line="32" selection-end-column="67" />
+              <folding>
+                <marker date="1432985253000" expanded="true" signature="833:1137" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="knowledge.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/controllers/knowledge.php">
+      <file leaf-file-name="create.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/knowledge/create.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37453184" vertical-offset="0" max-vertical-offset="801">
-              <caret line="25" column="60" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
+            <state vertical-scroll-proportion="0.31835207" vertical-offset="0" max-vertical-offset="801">
+              <caret line="22" column="109" selection-start-line="22" selection-start-column="109" selection-end-line="22" selection-end-column="109" />
+              <folding>
+                <marker date="1432985438000" expanded="true" signature="298:457" placeholder="..." />
+                <marker date="1432985438000" expanded="true" signature="488:694" placeholder="..." />
+                <marker date="1432985438000" expanded="true" signature="773:839" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Knowledge.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/Entities/Knowledge.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-22.125" vertical-offset="534" max-vertical-offset="1335">
+              <caret line="76" column="34" selection-start-line="76" selection-start-column="20" selection-end-line="76" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -56,8 +70,8 @@
       <file leaf-file-name="knowledge_model.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/models/knowledge_model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.0" vertical-offset="0" max-vertical-offset="660">
-              <caret line="37" column="25" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="25" />
+            <state vertical-scroll-proportion="-22.5" vertical-offset="0" max-vertical-offset="660">
+              <caret line="41" column="23" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -91,12 +105,12 @@
         <option value="$PROJECT_DIR$/application/views/_inc/header.php" />
         <option value="$PROJECT_DIR$/application/views/_inc/footer.php" />
         <option value="$PROJECT_DIR$/application/views/_inc/footer.php" />
-        <option value="$PROJECT_DIR$/application/views/knowledge/create.php" />
-        <option value="$PROJECT_DIR$/application/views/knowledge/create.php" />
         <option value="$PROJECT_DIR$/application/views/knowledge/listing.php" />
         <option value="$PROJECT_DIR$/application/controllers/knowledge.php" />
         <option value="$PROJECT_DIR$/application/controllers/knowledge.php" />
         <option value="$PROJECT_DIR$/application/models/knowledge_model.php" />
+        <option value="$PROJECT_DIR$/application/views/knowledge/create.php" />
+        <option value="$PROJECT_DIR$/application/views/knowledge/create.php" />
       </list>
     </option>
   </component>
@@ -437,7 +451,13 @@
       <option name="project" value="LOCAL" />
       <updated>1432929562845</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Materialize adicionado novamente">
+      <created>1432984387193</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1432984387193</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView" selected-index="1">
@@ -504,7 +524,8 @@
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="false" />
     <MESSAGE value="Doctrine adicionado" />
     <MESSAGE value="Retirado Materilaze&#10;Adicionado Bootstrap&#10;CRUD de Knowledge iniciado - CR" />
-    <option name="LAST_COMMIT_MESSAGE" value="Retirado Materilaze&#10;Adicionado Bootstrap&#10;CRUD de Knowledge iniciado - CR" />
+    <MESSAGE value="Materialize adicionado novamente" />
+    <option name="LAST_COMMIT_MESSAGE" value="Materialize adicionado novamente" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -612,14 +633,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/Entities/Knowledge.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2247191" vertical-offset="0" max-vertical-offset="1335">
-          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/normalize/normalize.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="7.7454543" vertical-offset="0" max-vertical-offset="6480">
@@ -646,37 +659,51 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/knowledge/listing.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49438202" vertical-offset="159" max-vertical-offset="1065">
-          <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.7752809" vertical-offset="159" max-vertical-offset="1065">
+          <caret line="52" column="89" selection-start-line="52" selection-start-column="89" selection-end-line="52" selection-end-column="89" />
           <folding>
             <element signature="e#6#93#0#PHP" expanded="true" />
-            <marker date="1432948627000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1432948627000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1432984560000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1432984560000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/knowledge/create.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.375" vertical-offset="0" max-vertical-offset="540">
-          <caret line="28" column="82" selection-start-line="28" selection-start-column="82" selection-end-line="28" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/knowledge_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.0" vertical-offset="0" max-vertical-offset="660">
-          <caret line="37" column="25" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/knowledge.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37453184" vertical-offset="0" max-vertical-offset="801">
-          <caret line="25" column="60" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
+        <state vertical-scroll-proportion="-16.875" vertical-offset="0" max-vertical-offset="675">
+          <caret line="32" column="67" selection-start-line="32" selection-start-column="67" selection-end-line="32" selection-end-column="67" />
+          <folding>
+            <marker date="1432985253000" expanded="true" signature="833:1137" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/knowledge_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-22.5" vertical-offset="0" max-vertical-offset="660">
+          <caret line="41" column="23" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Entities/Knowledge.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-22.125" vertical-offset="534" max-vertical-offset="1335">
+          <caret line="76" column="34" selection-start-line="76" selection-start-column="20" selection-end-line="76" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/knowledge/create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31835207" vertical-offset="0" max-vertical-offset="801">
+          <caret line="22" column="109" selection-start-line="22" selection-start-column="109" selection-end-line="22" selection-end-column="109" />
+          <folding>
+            <marker date="1432985438000" expanded="true" signature="298:457" placeholder="..." />
+            <marker date="1432985438000" expanded="true" signature="488:694" placeholder="..." />
+            <marker date="1432985438000" expanded="true" signature="773:839" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -39,6 +39,6 @@ class Knowledge_model extends CI_Model {
             ->where('k.id = ?1')
             ->setParameter(1, $id)
             ->getQuery()
-            ->getResult();
+            ->getSingleResult();
     }
 }

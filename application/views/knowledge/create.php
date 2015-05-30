@@ -15,19 +15,21 @@ $this->load->view('_inc/header');
 
     <?php echo form_open($action, 'class="form-horizontal" id="form"') ?>
 
+
+
     <div class="input-field">
-        <input type="text" name="name"/>
-        <label for="name">Nome</label>
+        <input type="text" name="name" class="form-control" placeholder="Name"/>
     </div>
 
     <div class="input-field">
-        <textarea name="description" class="materialize-textarea"></textarea>
-        <label for="description">Descrição</label>
+        <textarea name="description" class="materialize-textarea" rows="1" cols="1" placeholder="Descrição"></textarea>
     </div>
 
-    <div class="input-field">
-        <input type="submit" value="Criar" class="btn"/>
-    </div>
+
+    <button class="btn waves-effect waves-light" type="submit" name="action">Criar
+        <i class="mdi-content-send right"></i>
+    </button>
+
 
 </section>
 

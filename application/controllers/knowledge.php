@@ -23,8 +23,14 @@ class Knowledge extends CI_Controller {
 
     public function listing()
     {
-        $data['knowledge'] = $this->knowledge_model->listingAll();
+        $data['knowledge'] = $this->knowledge_model->findAll();
         $this->load->view('knowledge/listing', $data);
+    }
+
+    public function edit()
+    {
+        $data['action'] = "knowledge/editAction";
+        //$data['knowledge'] =
     }
 
     public function createAction() {

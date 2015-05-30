@@ -9,6 +9,6 @@
 ?>
 
         <script src="<?php echo base_url(); ?>public/jquery/jquery.js"></script>
-        <script src="<?php echo base_url(); ?>public/bootstrap/js/bootstrap.js"></script>
+        <script src="<?php echo base_url(); ?>public/materialize/js/materialize.js"></script>
     </body>
 </html>

@@ -12,24 +12,30 @@ $this->load->view('_inc/header');
 <section class="container">
 
     <?php if($this->session->flashdata('mensage') != null)
-        echo "<div class=''>
-            <p>".$this->session->flashdata('mensage')."</p>
+        echo "<div class='card-panel small teal lighten-2'>
+            <div class='container'>
+                <p class='white-text'>".$this->session->flashdata('mensage')."</p>
+            </div>
         </div>";
     ?>
 
     <h1>Conhecimentos</h1>
 
+    <br/>
+
     <div>
-        <a href="<?php echo base_url()."index.php/knowledge/create"; ?>">Criar Conhecimentos</a>
+        <a class="btn btn-primary" href="<?php echo base_url()."index.php/knowledge/create"; ?>">Criar Conhecimentos</a>
     </div>
 
-    <hr/>
+    <br/>
 
-    <table class="striped">
+    <table class="striped bordered">
         <thead>
             <th>#</th>
             <th>Nome</th>
             <th>Descrição</th>
+            <th>Editar</th>
+            <th>Deletar</th>
         </thead>
 
         <tbody>
@@ -38,6 +44,17 @@ $this->load->view('_inc/header');
                     <td><?= $k->getId(); ?></td>
                     <td><?= $k->getName(); ?></td>
                     <td><?= $k->getDescription(); ?></td>
+                    <td>
+                        <a href="<?php echo base_url()."index.php/knowledge/edit".$k->getId(); ?>">
+                            <i class="mdi-content-create" title="Editar"></i>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="<?php echo base_url()."index.php/knowledge/deleteAction".$k->getId(); ?>">
+                            <i class="mdi-content-clear" title="Deletar"></i>
+                        </a>
+                    </td>
+                    
                 </tr>
             <?php endforeach; ?>
         </tbody>

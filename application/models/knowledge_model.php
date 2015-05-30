@@ -24,7 +24,21 @@ class Knowledge_model extends CI_Model {
         $this->em->flush();
     }
 
-    public function listingAll() {
-        return $query = $this->qb->select('k')->from('\Entities\Knowledge', 'k')->getQuery()->getResult();
+    public function findAll()
+    {
+        return $this->qb->select('k')
+            ->from('\Entities\Knowledge', 'k')
+            ->getQuery()
+            ->getResult();
+    }
+
+    public function findById($id)
+    {
+        return $this->qb->select('k')
+            ->from('\Entities\Knowledge', 'k')
+            ->where('k.id = ?1')
+            ->setParameter(1, $id)
+            ->getQuery()
+            ->getResult();
     }
 }

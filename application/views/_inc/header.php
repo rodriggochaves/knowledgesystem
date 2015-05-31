@@ -15,5 +15,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="<?php echo base_url(); ?>public/normalize/normalize.css"/>
         <link rel="stylesheet" href="<?php echo base_url(); ?>public/materialize/css/materialize.css"/>
+        <link rel="stylesheet" href="<?php echo base_url(); ?>public/sweetalert/sweetalert.css"/>
     </head>
     <body>

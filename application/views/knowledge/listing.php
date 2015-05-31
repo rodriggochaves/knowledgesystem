@@ -24,7 +24,12 @@ $this->load->view('_inc/header');
     <br/>
 
     <div>
-        <a class="btn btn-primary" href="<?php echo base_url()."index.php/knowledge/create"; ?>">Criar Conhecimentos</a>
+        <?= anchor(
+            'knowledge/create',
+            'Criar Conhecimento',
+            array(
+              'class' => 'btn'
+            )) ?>
     </div>
 
     <br/>
@@ -45,14 +50,12 @@ $this->load->view('_inc/header');
                     <td><?= $k->getName(); ?></td>
                     <td><?= $k->getDescription(); ?></td>
                     <td>
-                        <a href="<?php echo base_url()."index.php/knowledge/edit/".$k->getId(); ?>">
-                            <i class="mdi-content-create" title="Editar"></i>
-                        </a>
+                        <?=  anchor('knowledge/edit/'.$k->getId(), '<i class="mdi-content-create" title="Editar"></i>', array('class' => 'btn') ); ?>
                     </td>
                     <td>
-                        <a href="<?php echo base_url()."index.php/knowledge/deleteAction/".$k->getId(); ?>">
-                            <i class="mdi-content-clear" title="Deletar"></i>
-                        </a>
+                        <button class="btn red" onclick="deleteConfirm('<?= site_url('knowledge/deleteAction/'.$k->getId()) ?>')">
+                            <i class="mdi-content-clear"></i>
+                        </button>
                     </td>
                     
                 </tr>

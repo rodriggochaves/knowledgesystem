@@ -15,19 +15,19 @@ $this->load->view('_inc/header');
 
     <?php echo form_open($action, 'class="form-horizontal" id="form"') ?>
 
+    <input type="hidden" name="id" value="<?php if(isset($knowledge)) echo $knowledge->getId(); ?>"/>
+
     <div class="input-field">
         <input type="text" name="name" class="form-control" placeholder="Name" value="<?php if(isset($knowledge)) echo $knowledge->getName(); ?>"/>
     </div>
 
     <div class="input-field">
-        <textarea name="description" class="materialize-textarea" rows="1" cols="1" placeholder="Descrição" ><?php if(isset($knowledge)) echo $knowledge->getDescription(); ?>
-        </textarea>
+        <textarea name="description" class="materialize-textarea" placeholder="Descrição"><?php if(isset($knowledge)) echo $knowledge->getDescription(); ?></textarea>
     </div>
 
     <button class="btn waves-effect waves-light" type="submit" name="action">Criar
         <i class="mdi-content-send right"></i>
     </button>
-
 
 </section>
 

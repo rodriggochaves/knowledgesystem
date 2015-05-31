@@ -37,6 +37,7 @@ class Knowledge {
     public function arrayToObject($arr) {
         $this->description = $arr['description'];
         $this->name = $arr['name'];
+        $this->id = $arr['id'];
     }
 
     /**

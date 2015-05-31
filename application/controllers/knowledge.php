@@ -42,4 +42,21 @@ class Knowledge extends CI_Controller {
         redirect("knowledge/listing");
     }
 
+    public function editAction()
+    {
+        $knowledge = new \Entities\Knowledge();
+        $knowledge->arrayToObject($this->input->post());
+        $this->knowledge_model->update($knowledge);
+        $this->session->set_flashdata('mensage', 'Conhecimento alterado com sucesso');
+        redirect('knowledge/listing');
+    }
+
+    public function deleteAction($id)
+    {
+        $knowledge = $this->knowledge_model->findById($id);
+        $this->knowledge_model->delete($knowledge);
+        $this->session->set_flashdata('mensage', 'Conhecimento excluído com sucesso!');
+        redirect('knowledge/listing');
+    }
+
 }

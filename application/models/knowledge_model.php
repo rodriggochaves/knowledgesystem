@@ -24,6 +24,18 @@ class Knowledge_model extends CI_Model {
         $this->em->flush();
     }
 
+    public function update($knowledge)
+    {
+        $this->em->merge($knowledge);
+        $this->em->flush();
+    }
+
+    public function delete($knowledge)
+    {
+        $this->em->remove($knowledge);
+        $this->em->flush();
+    }
+
     public function findAll()
     {
         return $this->qb->select('k')

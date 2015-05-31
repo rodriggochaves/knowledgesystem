@@ -23,14 +23,14 @@ class Knowledge extends CI_Controller {
 
     public function listing()
     {
-        $data['knowledge'] = $this->knowledge_model->findAll();
+        $data['knowledge'] = $this->knowledge_model->findAll(\Entities\Knowledge::getPath());
         $this->load->view('knowledge/listing', $data);
     }
 
     public function edit($id)
     {
         $data['action'] = "knowledge/editAction";
-        $data['knowledge'] = $this->knowledge_model->findById($id);
+        $data['knowledge'] = $this->knowledge_model->findById(\Entities\Knowledge::getPath(), $id);
         $this->load->view('knowledge/create', $data);
     }
 
@@ -53,7 +53,7 @@ class Knowledge extends CI_Controller {
 
     public function deleteAction($id)
     {
-        $knowledge = $this->knowledge_model->findById($id);
+        $knowledge = $this->knowledge_model->findById(\Entities\Knowledge::getPath(), $id);
         $this->knowledge_model->delete($knowledge);
         $this->session->set_flashdata('mensage', 'Conhecimento excluído com sucesso!');
         redirect('knowledge/listing');

@@ -2,46 +2,41 @@
 /**
  * Created by PhpStorm.
  * User: rodrigochaves
- * Date: 27/05/15
- * Time: 20:59
+ * Date: 31/05/15
+ * Time: 19:44
  */
 
 namespace Entities;
 
 /**
- * Class Knowledge
+ * Class Profile
  * @package Entities
  * @Entity
- * @Table(name="Knowledge")
+ * @Table(name="Profile")
  */
 
-class Knowledge {
+class Profile {
 
     /**
      * @Id
-     * @Column(name="idKnowledge", type="integer", nullable=false)
+     * @Column(name="idProfile", type="integer", nullable=false)
      * @GeneratedValue(strategy="AUTO")
      */
     private $id;
 
     /**
-     * @Column(name="name")
-     */
-    private $name;
-
-    /**
-     * @Column(name="description")
+     * @Column(name="description", nullable=false)
      */
     private $description;
 
     public static function getPath()
     {
-        return '\Entities\Knowledge';
+        return '\Entities\Profile';
     }
 
-    public function arrayToObject($arr) {
+    public function arrayToObject($arr)
+    {
         $this->description = $arr['description'];
-        $this->name = $arr['name'];
         $this->id = $arr['id'];
     }
 
@@ -64,32 +59,18 @@ class Knowledge {
     /**
      * @return mixed
      */
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    /**
-     * @param mixed $name
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
-    }
-
-    /**
-     * @return mixed
-     */
     public function getDescription()
     {
         return $this->description;
     }
 
     /**
-     * @param mixed $description
+     * @param mixed $descrption
      */
     public function setDescription($description)
     {
         $this->description = $description;
     }
+
+
 }

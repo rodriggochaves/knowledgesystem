@@ -17,3 +17,7 @@ function deleteConfirm(url) {
         }
     });
 }
+
+$(document).ready(function() {
+    $('select').material_select();
+});

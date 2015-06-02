@@ -18,8 +18,8 @@ class User {
 
     /**
      * @Id
-     * @Column(name="iduser", type="integer", nullable=false)
-     * @GeneratedValue(strategy="AUTO"
+     * @Column(name="idUser", type="integer", nullable=false)
+     * @GeneratedValue(strategy="AUTO")
      */
     private $id;
 
@@ -44,8 +44,8 @@ class User {
     private $password;
 
     /**
-     * @ManyToOne(targetEntity="Profile")
-     * @JoinColumn(name="Profile_idProfile", referencedColumnName="idProfile")
+     * @OneToMany(targetEntity="Profile")
+     * @Column(name="Profile_idProfile")
      */
     private $profile;
 
@@ -56,6 +56,8 @@ class User {
 
     public function arrayToObject($arr)
     {
+        $this->firstName = $arr['firstName'];
+        $this->lastName = $arr['lastName'];
         $this->email = $arr['email'];
         $this->password = $arr['password'];
         $this->profile = $arr['profile'];

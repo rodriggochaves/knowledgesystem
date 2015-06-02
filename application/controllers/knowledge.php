@@ -15,6 +15,11 @@ class Knowledge extends CI_Controller {
         $this->load->model('knowledge_model');
     }
 
+    public function index()
+    {
+        $this->listing();
+    }
+
     public function create()
     {
         $data['action'] = 'knowledge/createAction';

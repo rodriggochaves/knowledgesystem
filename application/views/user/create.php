@@ -49,11 +49,11 @@ $this->load->view('_inc/header');
 
     <div class="row">
         <div class="input-field col s6">
-            <input type="password" name="password" class="form-control"/>
+            <input type="password" name="password" class="form-control" value="<?= set_value('password') ?>"/>
             <label for="password">Senha</label>
         </div>
         <div class="input-field col s6">
-            <input type="password" name="passwordConfirmation" class="form-control" />
+            <input type="password" name="passwordConfirmation" class="form-control" value="<?= set_value('passwordConfirmation') ?>"/>
             <label for="passwordConfirmation">Confirmação da Senha</label>
         </div>
     </div>

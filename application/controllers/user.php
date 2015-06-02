@@ -20,7 +20,6 @@ class User extends CI_Controller
     public function create()
     {
         $data['action'] = 'user/createAction';
-        $data['profile'] = $this->profile_model->findAll(\Entities\Profile::getPath());
         $this->load->view('user/create', $data);
     }
 
@@ -38,7 +37,11 @@ class User extends CI_Controller
             $this->session->set_flashdata('warning', validation_errors());
             $this->create();
         } else {
-            die("Rebeca muito legal");
+            $user = new \Entities\User();
+            $user->arrayToObject($this->input->post());
+            $this->user_model->create($user);
+            $this->session->set_flashdata('mensage', 'Usuário criado com sucesso!');
+            redirect('user/listing');
         }
 
     }

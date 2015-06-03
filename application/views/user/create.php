@@ -15,8 +15,8 @@ $this->load->view('_inc/header');
     <?php if($this->session->flashdata('warning') != null) :?>
         <div class="card-panel small red lighten-1 white-text">
             <?= validation_errors(); ?>
+            <?php endif; ?>
         </div>
-    <?php endif; ?>
 
     <?php echo form_open($action, 'class="form-horizontal" id="form"') ?>
 

@@ -36,10 +36,10 @@ $this->load->view('_inc/header');
 
         <table class="striped bordered">
             <thead>
-            <th>#</th>
-            <th>Descrição</th>
-            <th>Editar</th>
-            <th>Deletar</th>
+                <th>#</th>
+                <th>Descrição</th>
+                <th>Editar</th>
+                <th>Deletar</th>
             </thead>
 
             <tbody>

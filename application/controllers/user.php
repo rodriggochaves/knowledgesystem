@@ -12,7 +12,6 @@ class User extends CI_Controller
     {
         parent::__construct();
         require('application/models/Entities/User.php');
-        $this->load->library('encrypt');
         $this->load->model('user_model');
         $this->load->model('profile_model');
     }
@@ -26,12 +25,14 @@ class User extends CI_Controller
     public function listing()
     {
         $data['user'] = $this->user_model->findAll(\Entities\User::getPath());
-        $this->load->view('user/listing');
+        $this->load->view('user/listing', $data);
     }
+
 
     public function createAction()
     {
         $this->load->library('form_validation');
+        $this->load->library('encrypt');
 
         if($this->form_validation->run('createUser') == false) {
             $this->session->set_flashdata('warning', validation_errors());
@@ -39,6 +40,7 @@ class User extends CI_Controller
         } else {
             $user = new \Entities\User();
             $user->arrayToObject($this->input->post());
+            $user->setPassword($this->encrypt->encode($user->getPassword()));
             $this->user_model->create($user);
             $this->session->set_flashdata('mensage', 'Usuário criado com sucesso!');
             redirect('user/listing');

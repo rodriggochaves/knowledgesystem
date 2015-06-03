@@ -47,7 +47,8 @@ $config = array(
             'label' => 'passwordConfirmation',
             'rules' => 'required|matches[password]',
             'errors' => array(
-                'matches' => 'As senhas não combinam'
+                'matches' => 'As senhas não combinam',
+                'required' => ''
             )
         ),
     )

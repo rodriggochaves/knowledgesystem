@@ -38,6 +38,7 @@ $this->load->view('_inc/header');
             <th>Primerio Nome</th>
             <th>Ultimo Nome</th>
             <th>Email</th>
+            <th>Editar</th>
         </thead>
         <tbody>
             <?php foreach($user as $u) : ?>
@@ -45,6 +46,7 @@ $this->load->view('_inc/header');
                     <td><?= $u->getFirstName(); ?></td>
                     <td><?= $u->getLastName(); ?></td>
                     <td><?= $u->getEmail(); ?></td>
+                    <td><?= anchor('user/edit/'.$u->getId(), '<i class="mdi-content-create" title="Editar"></i>', array('class' => 'btn')) ?></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>

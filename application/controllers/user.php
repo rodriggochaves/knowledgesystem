@@ -28,6 +28,13 @@ class User extends CI_Controller
         $this->load->view('user/listing', $data);
     }
 
+    public function edit($id)
+    {
+        $data['action'] = 'user/editAction';
+        $data['user'] = $this->user_model->findById(\Entities\User::getPath() ,$id);
+        $this->load->view('user/create', $data);
+    }
+
 
     public function createAction()
     {
@@ -40,7 +47,7 @@ class User extends CI_Controller
         } else {
             $user = new \Entities\User();
             $user->arrayToObject($this->input->post());
-            $user->setPassword($this->encrypt->encode($user->getPassword()));
+            $user->setPassword(md5($user->getPassword()));
             $this->user_model->create($user);
             $this->session->set_flashdata('mensage', 'Usuário criado com sucesso!');
             redirect('user/listing');

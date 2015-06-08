@@ -9,4 +9,9 @@
 class User_model extends base_model
 {
 
+//    public function login($user, $password)
+//    {
+//        $this->qb->
+//    }
+
 }

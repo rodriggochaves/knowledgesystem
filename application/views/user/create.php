@@ -24,12 +24,12 @@ $this->load->view('_inc/header');
 
     <div class="row">
         <div class="input-field col s6">
-            <input type="text" name="firstName" class="form-control" value="<?= set_value('firstName') ?>"/>
+            <input type="text" name="firstName" class="form-control" value="<?= isset($user) ?  $user->getFirstName() : set_value('firstName'); ?>"/>
             <label for="firstName">Primeiro Nome</label>
         </div>
 
         <div class="input-field col s6">
-            <input type="text" name="lastName" class="form-control" value="<?= set_value('lastName') ?>"/>
+            <input type="text" name="lastName" class="form-control" value="<?= isset($user) ?  $user->getLastName() : set_value('lastName'); ?>"/>
             <label for="lastName">Último Nome</label>
         </div>
     </div>
@@ -37,11 +37,7 @@ $this->load->view('_inc/header');
     <div class="row">
         <div class="input-field col s12">
 <!--        @TODO habilitar validação para cada campo individualmente    -->
-            <input
-                type="email"
-                name="email"
-                class="form-control"
-                value="<?= set_value('email') ?>"
+            <input type="email" name="email" class="form-control" value="<?= isset($user) ?  $user->getEmail() : set_value('email'); ?>"
                 />
             <label for="email">Email</label>
         </div>
@@ -49,11 +45,11 @@ $this->load->view('_inc/header');
 
     <div class="row">
         <div class="input-field col s6">
-            <input type="password" name="password" class="form-control" value="<?= set_value('password') ?>"/>
+            <input type="password" name="password" class="form-control"/>
             <label for="password">Senha</label>
         </div>
         <div class="input-field col s6">
-            <input type="password" name="passwordConfirmation" class="form-control" value="<?= set_value('passwordConfirmation') ?>"/>
+            <input type="password" name="passwordConfirmation" class="form-control"/>
             <label for="passwordConfirmation">Confirmação da Senha</label>
         </div>
     </div>

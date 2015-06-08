@@ -15,8 +15,8 @@ $this->load->view('_inc/header');
     <?php if($this->session->flashdata('warning') != null) :?>
         <div class="card-panel small red lighten-1 white-text">
             <?= validation_errors(); ?>
-            <?php endif; ?>
         </div>
+    <?php endif; ?>
 
     <?php echo form_open($action, 'class="form-horizontal" id="form"') ?>
 
@@ -37,22 +37,28 @@ $this->load->view('_inc/header');
     <div class="row">
         <div class="input-field col s12">
 <!--        @TODO habilitar validação para cada campo individualmente    -->
-            <input type="email" name="email" class="form-control" value="<?= isset($user) ?  $user->getEmail() : set_value('email'); ?>"
-                />
+            <input type="email" name="email" class="form-control" value="<?= isset($user) ?  $user->getEmail() : set_value('email'); ?>" />
             <label for="email">Email</label>
         </div>
     </div>
 
-    <div class="row">
-        <div class="input-field col s6">
-            <input type="password" name="password" class="form-control"/>
-            <label for="password">Senha</label>
+    <? if(!isset($user)) : ?>
+        <div class="row">
+            <div class="input-field col s6">
+                <input type="password" name="password" class="form-control"/>
+                <label for="password">Senha</label>
+            </div>
+            <div class="input-field col s6">
+                <input type="password" name="passwordConfirmation" class="form-control"/>
+                <label for="passwordConfirmation">Confirmação da Senha</label>
+            </div>
         </div>
-        <div class="input-field col s6">
-            <input type="password" name="passwordConfirmation" class="form-control"/>
-            <label for="passwordConfirmation">Confirmação da Senha</label>
-        </div>
-    </div>
+    <? else : ?>
+        <? //TODO criar botão de mudar senha ?>
+
+        <input type="hidden" name="password" value="<?= $user->getPassword(); ?>"/>
+    <? endif; ?>
+
 
     <br/>
 

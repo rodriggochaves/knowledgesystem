@@ -30,7 +30,7 @@ class User extends CI_Controller
 
     public function edit($id)
     {
-        $data['action'] = 'user/editAction';
+        $data['action'] = 'user/editAction/'.$id;
         $data['user'] = $this->user_model->findById(\Entities\User::getPath() ,$id);
         $this->load->view('user/create', $data);
     }
@@ -52,6 +52,23 @@ class User extends CI_Controller
             $this->session->set_flashdata('mensage', 'Usuário criado com sucesso!');
             redirect('user/listing');
         }
+    }
 
+    public function editAction($id)
+    {
+        $this->load->library('form_validation');
+        $this->load->library('encrypt');
+
+        if($this->form_validation->run('editUser') == false) {
+            $this->session->set_flashdata('warning', validation_errors());
+            $this->edit($id);
+        } else {
+            $user = new \Entities\User();
+            $user->arrayToObject($this->input->post());
+            $user->setPassword(md5($user->getPassword()));
+            $this->user_model->update($user);
+            $this->session->set_flashdata('mensage', 'Usuário alterado com sucesso!');
+            redirect('user/listing');
+        }
     }
 }

@@ -16,6 +16,12 @@ class User extends CI_Controller
         $this->load->model('profile_model');
     }
 
+    public function index()
+    {
+        $data['action'] = 'user/loginAction';
+        $this->load->view('user/login', $data);
+    }
+
     public function create()
     {
         $data['action'] = 'user/createAction';
@@ -69,6 +75,25 @@ class User extends CI_Controller
             $this->user_model->update($user);
             $this->session->set_flashdata('mensage', 'Usuário alterado com sucesso!');
             redirect('user/listing');
+        }
+    }
+
+    public function loginAction()
+    {
+        $this->load->library('form_validation');
+        $this->load->library('encrypt');
+
+        $email = $this->input->post()['email'];
+        $password = $this->input->post()['password'];
+
+        if($this->form_validation->run('loginUser') == false)
+        {
+            $this->session->set_flashdata('warning', validation_errors());
+            $this->index();
+        } else {
+            $user = $this->user_model->login($email, $password);
+            //todo armazernar informações do usuário na session
+            //todo redirecionar para a home do usuario
         }
     }
 }

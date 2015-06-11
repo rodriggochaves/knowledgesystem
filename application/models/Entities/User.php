@@ -64,6 +64,17 @@ class User {
         $this->id = $arr['id'];
     }
 
+    public function objectToArray()
+    {
+        return array(
+            'firstName' => $this->firstName,
+            'lastName' => $this->lastName,
+            'email' => $this->email,
+            'password' => $this->password,
+            'profile' => $this->profile
+        );
+    }
+
     /**
      * @return mixed
      */

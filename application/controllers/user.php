@@ -92,8 +92,21 @@ class User extends CI_Controller
             $this->index();
         } else {
             $user = $this->user_model->login($email, $password);
-            //todo armazernar informações do usuário na session
-            //todo redirecionar para a home do usuario
+            if($user == null) {
+                $this->session->set_flashdata('warning', 'O email ou a senha estão incorretas');
+                $this->index();
+            } else {
+                $user->setPassword("");//seta a senha como zero para não ser armazenada na session
+                $userdata = $user->objectToArray();
+                $userdata['profile'] = $this->profile_model->findById(\Entities\Profile::getPath(), $userdata['profile'])->getDescription();
+                $this->session->set_userdata('user', $userdata);
+                redirect('user/home');
+            }
         }
+    }
+
+    public function home()
+    {
+        $this->load->view('user/home');
     }
 }

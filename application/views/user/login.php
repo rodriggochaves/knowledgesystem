@@ -16,6 +16,12 @@ $this->load->view('_inc/header');
 
     <?= form_open($action, 'class="form-horizontal"', 'id="form"') ?>
 
+    <?php if($this->session->flashdata('warning') != null) : ?>
+        <div class="card-panel red lighten-1 white-text">
+            <?= $this->session->flashdata('warning') ?>
+        </div>
+    <?php endif; ?>
+
     <div class="card-panel center-align">
         <div class="input-field">
             <input type="email" name="email"/>

@@ -17,26 +17,19 @@ class User_model extends Base_model
 
     public function login($email, $password)
     {
-        $queryCount = $this->qb->select('count(u)')
-            ->from(\Entities\User::getPath(), 'u')
-            ->where('u.email = ?1')
-            ->andWhere('u.password = ?2')
+        $user = $this->qb->select('v')
+            ->from(\Entities\User::getPath(), 'v')
+            ->where('v.email = ?1')
+            ->andWhere('v.password = ?2')
             ->setParameter(1, $email)
             ->setParameter(2, md5($password))
-            ->getQuery();
+            ->getQuery()
+            ->getOneOrNullResult();
 
-        if($queryCount->getSingleScalarResult() == 0) {
+        if($user === null) {
             return null;
         } else {
-            $query = $this->qb->select('v')
-                ->from(\Entities\User::getPath(), 'v')
-                ->where('v.email = ?1')
-                ->andWhere('v.password = ?2')
-                ->setParameter(1, $email)
-                ->setParameter(2, md5($password))
-                ->getQuery();
-
-            return $query->getSingleResult();
+            return $user;
         }
     }
 

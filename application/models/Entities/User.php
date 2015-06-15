@@ -57,6 +57,12 @@ class User {
      */
     private $userKnowledge;
 
+    /**
+     * @ManyToMany(targetEntity="Course", mappedBy="users")
+     * @JoinColumn(name="Course_idCourse")
+     */
+    private $courses;
+
     public static function getPath()
     {
         return '\Entities\User';

@@ -32,7 +32,7 @@ class course extends CI_Controller
     {
         $data['action'] = 'course/editAction/'.$id;
         $data['course'] = $this->course_model->findById(\Entities\Course::getPath(), $id);
-        $this->load->view('course/create', $data);
+        $this->load->view('course/edit', $data);
     }
 
     public function createAction()
@@ -59,5 +59,10 @@ class course extends CI_Controller
         $this->course_model->delete($course);
         $this->session->set_flashdata('mensage', 'Curso excluído com sucesso!');
         redirect('course/listing');
+    }
+
+    public function addUser($id)
+    {
+
     }
 }

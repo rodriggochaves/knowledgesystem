@@ -44,6 +44,14 @@ class Course {
      */
     private $courseKnowledge;
 
+    /**
+     * @ManyToMany(targetEntity="User", inversedBy="courses")
+     * @JoinTable(name="User_has_Course",
+     *  joinColumns={@JoinColumn(name="Course_idCourse", referencedColumnName="idCourse")},
+     *  inverseJoinColumns={@JoinColumn(name="User_idUser", referencedColumnName="idUser")})
+     */
+    private $users;
+
     public static function getPath()
     {
         return '\Entities\Course';
@@ -136,4 +144,22 @@ class Course {
     {
         $this->courseKnowledge = $courseKnowledge;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getUsers()
+    {
+        return $this->users;
+    }
+
+    /**
+     * @param mixed $users
+     */
+    public function setUsers($users)
+    {
+        $this->users = $users;
+    }
+
+
 }

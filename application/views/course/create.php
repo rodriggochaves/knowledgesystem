@@ -13,7 +13,7 @@ $this->load->view('_inc/header');
 
     <h1>Curso</h1>
 
-    <!--@todo criar um arquivo-->
+    <!--@todo criar um arquivo para guardar as mensagens flash-->
     <?php if($this->session->flashdata('mensage') != null) : ?>
         <div class="card-panel teal lighten-1 white-text">
             <?= $this->session->flashdata('mensage') ?>

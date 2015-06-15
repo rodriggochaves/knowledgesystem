@@ -28,6 +28,12 @@ class User extends CI_Controller
         $this->load->view('user/create', $data);
     }
 
+    public function select($id)
+    {
+        $data['user'] = $this->user_model->findById(\Entities\User::getPath(), $id);
+        $this->load->view('user/select', $data);
+    }
+
     public function listing()
     {
         $data['user'] = $this->user_model->findAll(\Entities\User::getPath());

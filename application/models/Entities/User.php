@@ -49,6 +49,14 @@ class User {
      */
     private $profile;
 
+    /**
+     * @ManyToMany(targetEntity="Knowledge", inversedBy="users")
+     * @JoinTable(name="User_has_Knowledge",
+     *  joinColumns={@JoinColumn(name="User_idUser", referencedColumnName="idUser")},
+     *  inverseJoinColumns={@JoinColumn(name="Knowledge_idKnowledge", referencedColumnName="idKnowledge")})
+     */
+    private $userKnowledge;
+
     public static function getPath()
     {
         return '\Entities\User';
@@ -169,5 +177,21 @@ class User {
     public function setLastName($lastName)
     {
         $this->lastName = $lastName;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUserKnowledge()
+    {
+        return $this->userKnowledge;
+    }
+
+    /**
+     * @param mixed $userKnowledge
+     */
+    public function setUserKnowledge(Knowledge $userKnowledge)
+    {
+        $this->userKnowledge = $userKnowledge;
     }
 }

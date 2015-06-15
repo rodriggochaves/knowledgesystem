@@ -40,6 +40,12 @@ class Knowledge {
      */
     private $courses;
 
+    /**
+     * @ManyToMany(targetEntity="User", mappedBy="userKnowledge")
+     * @JoinColumn(name="Knowledge_idKnowledge")
+     */
+    private $users;
+
     public static function getPath()
     {
         return '\Entities\Knowledge';
@@ -113,5 +119,21 @@ class Knowledge {
     public function setCourses($courses)
     {
         $this->courses = $courses;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUsers()
+    {
+        return $this->users;
+    }
+
+    /**
+     * @param mixed $users
+     */
+    public function setUsers(User $users)
+    {
+        $this->users = $users;
     }
 }

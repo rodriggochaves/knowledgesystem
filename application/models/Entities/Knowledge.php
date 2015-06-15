@@ -34,6 +34,12 @@ class Knowledge {
      */
     private $description;
 
+    /**
+     * @ManyToMany(targetEntity="Course", inversedBy="courseKnowledge")
+     * @JoinTable(name="Course_has_Knowledge")
+     */
+    private $courses;
+
     public static function getPath()
     {
         return '\Entities\Knowledge';
@@ -91,5 +97,21 @@ class Knowledge {
     public function setDescription($description)
     {
         $this->description = $description;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCourses()
+    {
+        return $this->courses;
+    }
+
+    /**
+     * @param mixed $courses
+     */
+    public function setCourses($courses)
+    {
+        $this->courses = $courses;
     }
 }

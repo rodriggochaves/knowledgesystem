@@ -39,6 +39,11 @@ class Course {
      */
     private $finishDate;
 
+    /**
+     * @ManyToMany(targetEntity="Knowledge", mappedBy="knowledgeCourse")
+     */
+    private $courseKnowledge;
+
     public static function getPath()
     {
         return '\Entities\Course';
@@ -114,5 +119,21 @@ class Course {
     public function setFinishDate($finishDate)
     {
         $this->finishDate = $finishDate;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCourseKnowledge()
+    {
+        return $this->courseKnowledge;
+    }
+
+    /**
+     * @param mixed $courseKnowledge
+     */
+    public function setCourseKnowledge(Knowledge $courseKnowledge)
+    {
+        $this->courseKnowledge = $courseKnowledge;
     }
 }

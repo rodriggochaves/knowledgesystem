@@ -14,11 +14,13 @@ class course extends CI_Controller
         parent::__construct();
         require('application/models/Entities/Course.php');
         $this->load->model('course_model');
+        $this->load->model('knowledge_model');
     }
 
     public function create()
     {
         $data['action'] = 'course/createAction';
+        $data['knowledge'] = $this->knowledge_model->findAll(\Entities\Knowledge::getPath());
         $this->load->view('course/create', $data);
     }
 
@@ -37,7 +39,11 @@ class course extends CI_Controller
 
     public function createAction()
     {
+        //die(var_dump($this->input->post('knowledge')));
+        $knowledge = $this->knowledge_model->findByIds(\Entities\Knowledge::getPath(), $this->input->post('knowledge'));
+        //die(var_dump($knowledge[1]->getName()));
         $course = new \Entities\Course();
+        $course->addKnowledge($knowledge);
         $course->arrayToObject($this->input->post());
         $this->course_model->create($course);
         $this->session->set_flashdata('mensage', 'Curso criado com sucesso!');
@@ -77,7 +83,8 @@ class course extends CI_Controller
     {
         $this->load->model('user_model');
         $course = $this->course_model->findById(\Entities\Course::getPath(), $id);
-        $users = $this->user_model->findByIds($this->input->post());
+        $users = $this->user_model->findByIds(\Entities\User::getPath() ,$this->input->post());
+        //die(var_dump($users[0]->getFirstName()));
         $course->addUser($users);
         $this->course_model->update($course);
         redirect('course/edit/'.$course->getId());

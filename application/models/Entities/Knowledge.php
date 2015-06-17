@@ -35,8 +35,8 @@ class Knowledge {
     private $description;
 
     /**
-     * @ManyToMany(targetEntity="Course", inversedBy="courseKnowledge")
-     * @JoinTable(name="Course_has_Knowledge")
+     * @ManyToMany(targetEntity="Course", mappedBy="courseKnowledge")
+     * @JoinColumn(name="course_idCourse")
      */
     private $courses;
 

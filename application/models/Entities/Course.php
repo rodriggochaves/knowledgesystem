@@ -40,7 +40,11 @@ class Course {
     private $finishDate;
 
     /**
-     * @ManyToMany(targetEntity="Knowledge", mappedBy="knowledgeCourse")
+     * @ManyToMany(targetEntity="Knowledge", inversedBy="courses")
+     * @JoinTable(name="Course_has_Knowledge",
+     *  joinColumns={@JoinColumn(name="course_idCourse", referencedColumnName="idCourse")},
+     *  inverseJoinColumns={@JoinColumn(name="knowledge_idKnowledge", referencedColumnName="idKnowledge")}
+     * )
      */
     private $courseKnowledge;
 
@@ -167,5 +171,10 @@ class Course {
         {
             $this->users->add($user);
         }
+    }
+
+    public function addKnowledge(Knowledge $knowledge)
+    {
+        $this->courseKnowledge = $knowledge;
     }
 }

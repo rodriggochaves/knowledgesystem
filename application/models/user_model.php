@@ -33,12 +33,4 @@ class User_model extends Base_model
         }
     }
 
-    //recuperar os usuários com o ids passados e retorna um array
-    //ideia que não funciona: busca para cada id o objeto correspondente
-    public function findByIds($ids)
-    {
-        return $this->em->createQuery('SELECT u FROM \Entities\User u WHERE u.id IN (:ids)')
-            ->setParameter('ids', $ids)->getResult();
-    }
-
 }

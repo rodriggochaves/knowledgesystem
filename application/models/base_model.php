@@ -53,4 +53,10 @@ class Base_model extends CI_Model
             ->getQuery()
             ->getSingleResult();
     }
+
+    public function findByIds($entity, $ids)
+    {
+        return $this->em->createQuery('SELECT u FROM '.$entity.' u WHERE u.id IN (:ids)')
+            ->setParameter('ids', $ids)->getResult();
+    }
 }

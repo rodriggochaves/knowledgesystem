@@ -63,6 +63,23 @@ class course extends CI_Controller
 
     public function addUser($id)
     {
+        $data['course'] = $this->course_model->findById(\Entities\Course::getPath(), $id);
+        $this->load->model('user_model');
+        $data['users'] = $this->user_model->findAll(\Entities\User::getPath());
+        $this->load->view('course/addUser', $data);
+    }
 
+    //recuperar os usuários inseridos no form
+    //com o curso e os usuários recuperados
+    //adicionar os usuários na lista do curso e o curso em cada usuário
+    //atualizar todos os objetos
+    public function addUserAction($id)
+    {
+        $this->load->model('user_model');
+        $course = $this->course_model->findById(\Entities\Course::getPath(), $id);
+        $users = $this->user_model->findByIds($this->input->post());
+        $course->addUser($users);
+        $this->course_model->update($course);
+        redirect('course/edit/'.$course->getId());
     }
 }

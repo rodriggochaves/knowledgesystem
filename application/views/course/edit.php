@@ -43,6 +43,12 @@ $this->load->view('_inc/header');
             </tbody>
         </table>
 
+        <br/><br/><br/>
+
+        <?= anchor('course/listing', 'Voltar para os cursos', array(
+            'class' => 'btn right'
+        )) ?>
+
     </section>
 
 <?php $this->load->view('_inc/footer'); ?>

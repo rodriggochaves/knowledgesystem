@@ -161,5 +161,11 @@ class Course {
         $this->users = $users;
     }
 
-
+    public function addUser(User $arrayUser)
+    {
+        foreach($arrayUser as $user)
+        {
+            $this->users->add($user);
+        }
+    }
 }

@@ -8,7 +8,7 @@
 
 class Base_model extends CI_Model
 {
-    private $em;
+    protected $em;
     protected $qb;
 
     function __construct()

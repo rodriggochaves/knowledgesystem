@@ -165,16 +165,24 @@ class Course {
         $this->users = $users;
     }
 
-    public function addUser(User $arrayUser)
+    public function addUser($arrayUser)
     {
         foreach($arrayUser as $user)
         {
-            $this->users->add($user);
+            $this->users[$user->getId()] = $user;
         }
     }
 
-    public function addKnowledge(Knowledge $knowledge)
+    public function addKnowledge($knowledge)
     {
-        $this->courseKnowledge = $knowledge;
+        foreach($knowledge as $k)
+        {
+            $this->courseKnowledge[] = $k;
+        }
+    }
+
+    public function removeUser ($user)
+    {
+        unset($this->users[$user->getId()]);
     }
 }

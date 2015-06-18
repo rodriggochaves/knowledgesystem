@@ -15,6 +15,7 @@ class course extends CI_Controller
         require('application/models/Entities/Course.php');
         $this->load->model('course_model');
         $this->load->model('knowledge_model');
+        $this->load->model('user_model');
     }
 
     public function create()
@@ -34,17 +35,16 @@ class course extends CI_Controller
     {
         $data['action'] = 'course/editAction/'.$id;
         $data['course'] = $this->course_model->findById(\Entities\Course::getPath(), $id);
+
         $this->load->view('course/edit', $data);
     }
 
     public function createAction()
     {
-        //die(var_dump($this->input->post('knowledge')));
         $knowledge = $this->knowledge_model->findByIds(\Entities\Knowledge::getPath(), $this->input->post('knowledge'));
-        //die(var_dump($knowledge[1]->getName()));
         $course = new \Entities\Course();
-        $course->addKnowledge($knowledge);
         $course->arrayToObject($this->input->post());
+        $course->addKnowledge($knowledge);
         $this->course_model->create($course);
         $this->session->set_flashdata('mensage', 'Curso criado com sucesso!');
         redirect('course/listing');
@@ -81,11 +81,29 @@ class course extends CI_Controller
     //atualizar todos os objetos
     public function addUserAction($id)
     {
-        $this->load->model('user_model');
         $course = $this->course_model->findById(\Entities\Course::getPath(), $id);
         $users = $this->user_model->findByIds(\Entities\User::getPath() ,$this->input->post());
-        //die(var_dump($users[0]->getFirstName()));
         $course->addUser($users);
+        $this->course_model->update($course);
+        redirect('course/edit/'.$course->getId());
+    }
+
+    public function approve($idCourse, $idUser)
+    {
+        $course = $this->course_model->findById(\Entities\Course::getPath(), $idCourse);
+        $user = $this->user_model->findById(\Entities\User::getPath(), $idUser);
+        $user->addKnowledge($course->getCourseKnowledge());
+        $course->removeUser($user);
+        $this->user_model->update($user);
+        $this->course_model->update($course);
+        redirect('course/edit/'.$course->getId());
+    }
+
+    public function disapprove($idCourse, $idUser)
+    {
+        $course = $this->course_model->findById(\Entities\Course::getPath(), $idCourse);
+        $user = $this->user_model->findById(\Entities\User::getPath(), $idUser);
+        $course->removeUser($user);
         $this->course_model->update($course);
         redirect('course/edit/'.$course->getId());
     }

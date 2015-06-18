@@ -37,13 +37,23 @@ $this->load->view('_inc/header');
                 <tr>
                     <td><?= $u->getFirstName()." ".$u->getLastName(); ?></td>
                     <td><?= $u->getEmail(); ?></td>
-
+                    <td><?= anchor('course/approve/'.$course->getId().'/'.$u->getId(), '<i class="mdi-action-done-all"></i>', array(
+                            'class' => 'btn'
+                        ))?></td>
+                    <td><?= anchor('course/disapprove/'.$course->getId().'/'.$u->getId(), '<i class="mdi-action-highlight-remove"></i>', array(
+                            'class' => 'btn red'
+                        ))?></td>
                 </tr>
             <?php endforeach; ?>
             </tbody>
         </table>
 
         <br/><br/><br/>
+
+        <!-- @todo fazer uma tela para editar o curso-->
+<!--        --><?//= anchor('course/edit/'.$course->getId(), 'Editar Curso', array(
+//            'class' => 'btn left'
+//        ))?>
 
         <?= anchor('course/listing', 'Voltar para os cursos', array(
             'class' => 'btn right'

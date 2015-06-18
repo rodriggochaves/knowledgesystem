@@ -200,4 +200,25 @@ class User {
     {
         $this->userKnowledge = $userKnowledge;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getCourses()
+    {
+        return $this->courses;
+    }
+
+    /**
+     * @param mixed $courses
+     */
+    public function setCourses($courses)
+    {
+        $this->courses = $courses;
+    }
+
+    public function addKnowledge($knowledge)
+    {
+        $this->userKnowledge[$knowledge->getId()] = $knowledge;
+    }
 }

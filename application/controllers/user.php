@@ -44,6 +44,7 @@ class User extends CI_Controller
     {
         $data['action'] = 'user/editAction/'.$id;
         $data['user'] = $this->user_model->findById(\Entities\User::getPath() ,$id);
+        $data['profiles'] = $this->profile_model->findAll(\Entities\Profile::getPath());
         $this->load->view('user/create', $data);
     }
 
@@ -58,6 +59,7 @@ class User extends CI_Controller
             $this->create();
         } else {
             $user = new \Entities\User();
+            //die(var_dump($this->input->post()));
             $user->arrayToObject($this->input->post());
             $user->setPassword(md5($user->getPassword()));
             $this->user_model->create($user);
@@ -102,17 +104,24 @@ class User extends CI_Controller
                 $this->session->set_flashdata('warning', 'O email ou a senha estão incorretas');
                 $this->index();
             } else {
-                $user->setPassword("");//seta a senha como zero para não ser armazenada na session
-                $userdata = $user->objectToArray();
-                $userdata['profile'] = $this->profile_model->findById(\Entities\Profile::getPath(), $userdata['profile'])->getDescription();
-                $this->session->set_userdata('user', $userdata);
-                redirect('user/home');
+                redirect('user/home/'.$user->getId());
             }
         }
     }
 
-    public function home()
+    public function home($id)
     {
-        $this->load->view('user/home');
+        //recupera usuário
+        $user = $this->user_model->findById(\Entities\User::getPath(), $id);
+
+        //armazena informação do usuário na session
+        $user->setPassword("");//seta a senha como zero para não ser armazenada na session
+        $userdata = $user->objectToArray();
+        $userdata['profileDescription'] = $this->profile_model->findById(\Entities\Profile::getPath(), $userdata['profile'])->getDescription();
+        $this->session->set_userdata('user', $userdata);
+
+        //recupera cursos do usuário
+        $data['userCourses'] = $user->getCourses();
+        $this->load->view('user/home', $data);
     }
 }

@@ -21,6 +21,7 @@ $this->load->view('_inc/header');
     <?php echo form_open($action, 'class="form-horizontal" id="form"') ?>
 
     <input type="hidden" name="id" value="<?php if(isset($user)) echo $user->getId(); ?>"/>
+    <input type="hidden" name="profile" value="<?= isset($user) ? $user->getProfile() : 3  ?>"/>
 
     <div class="row">
         <div class="input-field col s6">
@@ -36,7 +37,7 @@ $this->load->view('_inc/header');
 
     <div class="row">
         <div class="input-field col s12">
-<!--        @TODO habilitar validação para cada campo individualmente    -->
+            <!--@TODO habilitar validação para cada campo individualmente-->
             <input type="email" name="email" class="form-control" value="<?= isset($user) ?  $user->getEmail() : set_value('email'); ?>" />
             <label for="email">Email</label>
         </div>
@@ -59,6 +60,22 @@ $this->load->view('_inc/header');
         <input type="hidden" name="password" value="<?= $user->getPassword(); ?>"/>
     <? endif; ?>
 
+    <div class="row">
+        <div class="col s6">
+            <div class="input-field col s12">
+                <select name="profile" id="profile">
+                    <?php if(isset($user)) : ?>
+                        <option <?php if($user->getProfile() == 2) echo 'selected' ?> value="2">Professor</option>
+                        <option <?php if($user->getProfile() == 3) echo 'selected' ?> value="3">Aluno</option>
+                    <?php else : ?>
+                        <option value="2">Professor</option>
+                        <option value="3">Aluno</option>
+                    <?php endif; ?>
+                </select>
+            </div>
+        </div>
+    </div>
+
 
     <br/>
 
@@ -69,8 +86,6 @@ $this->load->view('_inc/header');
             </button>
         </div>
     </div>
-
-    <input type="hidden" name="profile" value="1"/>
 
 </section>
 

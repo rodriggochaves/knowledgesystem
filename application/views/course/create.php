@@ -42,17 +42,6 @@ $this->load->view('_inc/header');
         </div>
     </div>
 
-    <div class="row">
-        <div class="input-field col s4">
-            <h5>Conhecimentos</h5>
-            <?php foreach($knowledge as $k) : ?>
-                <input type="checkbox" class="filled-in" id="<?= $k->getId(); ?>" name="knowledge[]" value="<?= $k->getId(); ?>"/>
-                <label for="<?= $k->getId(); ?>"><?= $k->getName(); ?></label><br /><br/>
-            <?php endforeach; ?>
-        </div>
-
-    </div>
-
     <br/><br/>
 
     <div class="row">

@@ -42,7 +42,7 @@ class Course {
     /**
      * @ManyToMany(targetEntity="Knowledge", inversedBy="courses")
      * @JoinTable(name="Course_has_Knowledge",
-     *  joinColumns={@JoinColumn(name="course_idCourse", referencedColumnName="idCourse")},
+     *  joinColumns={@JoinColumn(name="Course_idCourse", referencedColumnName="idCourse")},
      *  inverseJoinColumns={@JoinColumn(name="knowledge_idKnowledge", referencedColumnName="idKnowledge")}
      * )
      */
@@ -169,7 +169,7 @@ class Course {
     {
         foreach($arrayUser as $user)
         {
-            $this->users[$user->getId()] = $user;
+            $this->users->add($user);
         }
     }
 
@@ -177,12 +177,12 @@ class Course {
     {
         foreach($knowledge as $k)
         {
-            $this->courseKnowledge[] = $k;
+            $this->courseKnowledge->add($k);
         }
     }
 
-    public function removeUser ($user)
+    public function removeUser($user)
     {
-        unset($this->users[$user->getId()]);
+        $this->users->removeElement($user);
     }
 }

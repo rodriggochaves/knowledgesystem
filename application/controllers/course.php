@@ -35,7 +35,6 @@ class course extends CI_Controller
     {
         $data['action'] = 'course/editAction/'.$id;
         $data['course'] = $this->course_model->findById(\Entities\Course::getPath(), $id);
-
         $this->load->view('course/edit', $data);
     }
 
@@ -44,7 +43,6 @@ class course extends CI_Controller
         $knowledge = $this->knowledge_model->findByIds(\Entities\Knowledge::getPath(), $this->input->post('knowledge'));
         $course = new \Entities\Course();
         $course->arrayToObject($this->input->post());
-        $course->addKnowledge($knowledge);
         $this->course_model->create($course);
         $this->session->set_flashdata('mensage', 'Curso criado com sucesso!');
         redirect('course/listing');
@@ -67,6 +65,25 @@ class course extends CI_Controller
         redirect('course/listing');
     }
 
+    public function addKnowledge($id)
+    {
+        $data['course'] = $this->course_model->findById(\Entities\Course::getPath(), $id);
+        $this->load->model('knowledge_model');
+        $data['knowledge'] = $this->knowledge_model->findAll(\Entities\Knowledge::getPath());
+        $this->load->view('course/addKnowledge', $data);
+    }
+
+
+    public function addKnowledgeAction($id)
+    {
+        $course = $this->course_model->findById(\Entities\Course::getPath(), $id);
+        $knowledge = $this->knowledge_model->findByIds(\Entities\Knowledge::getPath() ,$this->input->post());
+        $course->addKnowledge($knowledge);
+        $this->course_model->update($course);
+        redirect('course/edit/'.$course->getId());
+    }
+
+
     public function addUser($id)
     {
         $data['course'] = $this->course_model->findById(\Entities\Course::getPath(), $id);
@@ -75,10 +92,7 @@ class course extends CI_Controller
         $this->load->view('course/addUser', $data);
     }
 
-    //recuperar os usuários inseridos no form
-    //com o curso e os usuários recuperados
-    //adicionar os usuários na lista do curso e o curso em cada usuário
-    //atualizar todos os objetos
+
     public function addUserAction($id)
     {
         $course = $this->course_model->findById(\Entities\Course::getPath(), $id);
@@ -101,6 +115,7 @@ class course extends CI_Controller
 
     public function disapprove($idCourse, $idUser)
     {
+
         $course = $this->course_model->findById(\Entities\Course::getPath(), $idCourse);
         $user = $this->user_model->findById(\Entities\User::getPath(), $idUser);
         $course->removeUser($user);

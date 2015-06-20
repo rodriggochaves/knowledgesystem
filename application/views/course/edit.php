@@ -17,7 +17,31 @@ $this->load->view('_inc/header');
 
         <br/>
 
-        <?php //@todo tirar a página e colocar um campo de texto que ajuda a preencher com js?>
+        <?php //@todo tirar a página de adicionar e colocar um campo de texto que ajuda a preencher com js?>
+
+        <?= anchor('course/addKnowledge/'.$course->getId(), 'Adicionar conhecimentos', array(
+            'class' => 'btn'
+        )) ?>
+
+        <br/><br/>
+
+        <h5><strong>Conhecimentos</strong></h5>
+        <table>
+            <thead>
+                <th>Nome</th>
+            </thead>
+            <tbody>
+                <?php foreach($course->getCourseKnowledge() as $k) : ?>
+                <tr>
+                    <td><?= $k->getName(); ?></td>
+                </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+
+        <br/>
+        <br/>
+        <br/>
 
         <?= anchor('course/addUser/'.$course->getId(), 'Adicionar membros', array(
             'class' => 'btn'
@@ -25,6 +49,7 @@ $this->load->view('_inc/header');
 
         <br/><br/>
 
+        <h5><strong>Membros</strong></h5>
         <table>
             <thead>
             <th>Nome</th>

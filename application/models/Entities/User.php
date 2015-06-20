@@ -219,6 +219,9 @@ class User {
 
     public function addKnowledge($knowledge)
     {
-        $this->userKnowledge[$knowledge->getId()] = $knowledge;
+        foreach($knowledge as $k)
+        {
+            $this->userKnowledge->add($k);
+        }
     }
 }

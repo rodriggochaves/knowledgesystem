@@ -6,6 +6,8 @@
  * Time: 21:06
  */
 $this->load->view('_inc/header');
+
+$this->load->view('_inc/adminMenu');
 ?>
 
 <section class="container">

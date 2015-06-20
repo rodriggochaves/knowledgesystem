@@ -115,7 +115,6 @@ class course extends CI_Controller
 
     public function disapprove($idCourse, $idUser)
     {
-
         $course = $this->course_model->findById(\Entities\Course::getPath(), $idCourse);
         $user = $this->user_model->findById(\Entities\User::getPath(), $idUser);
         $course->removeUser($user);

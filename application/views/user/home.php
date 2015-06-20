@@ -8,6 +8,8 @@
 
 $this->load->view('_inc/header');
 
+$this->load->view('_inc/userMenu');
+
 $user = $this->session->userdata('user');
 ?>
 

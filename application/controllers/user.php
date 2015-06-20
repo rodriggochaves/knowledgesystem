@@ -18,12 +18,27 @@ class User extends CI_Controller
 
     public function index()
     {
+        //verifica se existe agluém logado
+        if($this->session->has_userdata('user')){
+            //recupera o id da pessoa logada
+            $id = $this->session->user['id'];
+
+            //envia para a página de admin ou usuário
+            if($this->session->user['profile'] == '1'){
+                redirect('admin/home/'.$id);
+            } else {
+                redirect('user/home/'.$id);
+            }
+        }
+
+        //envia para a página de login
         $data['action'] = 'user/loginAction';
         $this->load->view('user/login', $data);
     }
 
     public function create()
     {
+        $this->isAdmin();
         $data['action'] = 'user/createAction';
         $this->load->view('user/create', $data);
     }
@@ -36,6 +51,7 @@ class User extends CI_Controller
 
     public function listing()
     {
+        if($this->session->user['profile'] != '1') redirect('user/index');
         $data['user'] = $this->user_model->findAll(\Entities\User::getPath());
         $this->load->view('user/listing', $data);
     }
@@ -104,7 +120,11 @@ class User extends CI_Controller
                 $this->session->set_flashdata('warning', 'O email ou a senha estão incorretas');
                 $this->index();
             } else {
-                redirect('user/home/'.$user->getId());
+                if($user->getProfile() == '1') {
+                    redirect('admin/home/'.$user->getId());
+                } else {
+                    redirect('user/home/'.$user->getId());
+                }
             }
         }
     }
@@ -122,6 +142,22 @@ class User extends CI_Controller
 
         //recupera cursos do usuário
         $data['userCourses'] = $user->getCourses();
+
+        //carrega a view
         $this->load->view('user/home', $data);
+    }
+
+    //Função que verifica se o usuário logado é um admin.
+    //Redireciona para a tela de login caso falso
+    private function isAdmin()
+    {
+        if($this->session->user['profile'] !== '1') redirect('user/index');
+    }
+
+    //Função que verifica se o usuário está logado
+    //Redireciona para a tela de login
+    private function isLogged()
+    {
+        if($this->session->has_userdata()) redirect('user/index');
     }
 }

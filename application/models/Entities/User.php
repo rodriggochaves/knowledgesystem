@@ -81,6 +81,7 @@ class User {
     public function objectToArray()
     {
         return array(
+            'id' => $this->id,
             'firstName' => $this->firstName,
             'lastName' => $this->lastName,
             'email' => $this->email,

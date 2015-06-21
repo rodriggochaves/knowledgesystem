@@ -15,7 +15,7 @@ $user = $this->session->userdata('user');
 
     <section class="container">
 
-        <h1>Bem vindo</h1>
+        <h1>Bem Vindo</h1>
 
         <h6 class="right-align"><?= $user['firstName']." ".$user['lastName'].", ".$user['profileDescription'] ?></h6>
 

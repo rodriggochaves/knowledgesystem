@@ -11,7 +11,7 @@ $this->load->view('_inc/header');
 <section class="container center-align">
 
     <br/>
-    <h1>Knowledge System</h1>
+    <h1 class="teal-text">Knowledge System</h1>
     <br/><br/><br/>
 
     <?= form_open($action, 'class="form-horizontal"', 'id="form"') ?>

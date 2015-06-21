@@ -37,15 +37,6 @@ class admin extends CI_Controller {
         $this->load->view('user/admin/home');
     }
 
-    public function logout()
-    {
-        //destroi a sessão
-        $this->session->sess_destroy();
-
-        //redireciona para o login de usuário
-        redirect('user/index');
-    }
-
     //Função que verifica se o usuário logado é um admin.
     //Redireciona para a tela de login caso falso
     private function isAdmin()

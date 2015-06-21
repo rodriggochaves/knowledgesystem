@@ -65,6 +65,14 @@ class User extends CI_Controller
     }
 
 
+    public function listingUsersKnowledge()
+    {
+        $this->isAdmin();
+        $data['user'] = $this->user_model->findAll(\Entities\User::getPath());
+        $this->load->view('user/admin/listingUsersKnowledge', $data);
+    }
+
+
     public function createAction()
     {
         $this->load->library('form_validation');
@@ -112,7 +120,7 @@ class User extends CI_Controller
 
         if($this->form_validation->run('loginUser') == false)
         {
-            $this->session->set_flashdata('warning', validation_errors());
+            $this->session->set_flashdata('warning', 'Login falhou! Tente novamente.');
             $this->index();
         } else {
             $user = $this->user_model->login($email, $password);
@@ -127,6 +135,20 @@ class User extends CI_Controller
                 }
             }
         }
+    }
+
+    //mostra os conhecimentos do usuário logado
+    public function userKnowledge()
+    {
+
+        //verifica se existi um usuário logado
+        $this->isLogged();
+
+        //carrega informações do usuário logado
+        $data['user'] = $this->user_model->findById(\Entities\User::getPath(), $this->session->user['id']);
+
+        //redireciona para a view
+        $this->load->view('user/userKnowledge', $data);
     }
 
     public function home($id)
@@ -158,6 +180,16 @@ class User extends CI_Controller
     //Redireciona para a tela de login
     private function isLogged()
     {
-        if($this->session->has_userdata()) redirect('user/index');
+        if(!$this->session->has_userdata('user')) redirect('user/index');
+    }
+
+    //Função de logout
+    public function logout()
+    {
+        //destroi a sessão
+        $this->session->sess_destroy();
+
+        //redireciona para o login de usuário
+        redirect('user/index');
     }
 }

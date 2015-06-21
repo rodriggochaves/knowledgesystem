@@ -83,19 +83,12 @@ $config = array(
         array(
             'field' => 'email',
             'label' => 'email',
-            'rules' => 'required|valid_email',
-            'errors' => array(
-                'required' => 'Insira um email válido',
-                'valid_email' => 'Insira um email válido'
-            )
+            'rules' => 'required|valid_email'
         ),
         array(
             'field' => 'password',
             'label' => 'password',
-            'rules' => 'required',
-            'errors' => array(
-                'required' => 'Insira uma senha'
-            )
+            'rules' => 'required'
         )
     )
 );

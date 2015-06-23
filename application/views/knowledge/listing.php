@@ -13,15 +13,11 @@ $this->load->view('_inc/adminMenu');
 
 <section class="container">
 
-    <?php if($this->session->flashdata('mensage') != null)
-        echo "<div class='card-panel small teal lighten-2'>
-            <div class='container'>
-                <p class='white-text'>".$this->session->flashdata('mensage')."</p>
-            </div>
-        </div>";
-    ?>
-
     <h1>Conhecimentos</h1>
+
+    <br/>
+
+    <?php $this->load->view('_inc/flashMensage') ?>
 
     <br/>
 

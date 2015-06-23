@@ -40,9 +40,10 @@ class course extends CI_Controller
 
     public function createAction()
     {
-        $knowledge = $this->knowledge_model->findByIds(\Entities\Knowledge::getPath(), $this->input->post('knowledge'));
         $course = new \Entities\Course();
         $course->arrayToObject($this->input->post());
+        $ownerUser = $this->user_model->findById(\Entities\User::getPath(), $this->input->post('ownerUser'));
+        $course->setOwnerUser($ownerUser);
         $this->course_model->create($course);
         $this->session->set_flashdata('mensage', 'Curso criado com sucesso!');
         redirect('course/listing');

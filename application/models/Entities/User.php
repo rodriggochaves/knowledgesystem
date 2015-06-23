@@ -63,6 +63,7 @@ class User {
      */
     private $courses;
 
+
     public static function getPath()
     {
         return '\Entities\User';

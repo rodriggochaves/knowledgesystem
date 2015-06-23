@@ -56,6 +56,12 @@ class Course {
      */
     private $users;
 
+    /**
+     * @OneToOne(targetEntity="User")
+     * @JoinColumn(name="User_idUser", referencedColumnName="idUser")
+     */
+    private $ownerUser;
+
     public static function getPath()
     {
         return '\Entities\Course';
@@ -163,6 +169,22 @@ class Course {
     public function setUsers($users)
     {
         $this->users = $users;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getOwnerUser()
+    {
+        return $this->ownerUser;
+    }
+
+    /**
+     * @param mixed $ownerUser
+     */
+    public function setOwnerUser($ownerUser)
+    {
+        $this->ownerUser = $ownerUser;
     }
 
     public function addUser($arrayUser)

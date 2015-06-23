@@ -19,7 +19,7 @@ $user = $this->session->userdata('user');
 
         <h6 class="right-align"><?= $user['firstName']." ".$user['lastName'].", ".$user['profileDescription'] ?></h6>
 
-        <h5>Cursos</h5>
+        <h5>Meus Cursos</h5>
 
         <table>
             <thead>
@@ -34,6 +34,10 @@ $user = $this->session->userdata('user');
                 <?php endforeach; ?>
             </tbody>
         </table>
+
+        <?php
+            if($user['profile'] == '2') $this->load->view('user/_inc/teacherCourseHome');
+        ?>
 
     </section>
 

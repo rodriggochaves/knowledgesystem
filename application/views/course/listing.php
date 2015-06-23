@@ -7,7 +7,11 @@
  */
 
 $this->load->view('_inc/header');
-($this->session->user['profile'] == '1') ? $this->load->view('_inc/adminMenu') : $this->load->view('_inc/userMenu')
+
+//armazena em uma variável local o perfil do usuário logado
+$profile = $this->session->user['profile'];
+
+($this->session->user['profile'] == '1') ? $this->load->view('_inc/adminMenu') : $this->load->view('_inc/userMenu');
 ?>
 
     <section class="container">
@@ -42,18 +46,18 @@ $this->load->view('_inc/header');
                         <td><?= $c->getStartDate(); ?></td>
                         <td><?= $c->getFinishDate(); ?></td>
                         <td>
-                            <?php  if($this->session->user['profile'] == '1') echo anchor('course/edit/'.$c->getId(), '<i class="mdi-content-create" title="Editar"></i>', array(
+                            <?php  if($profile == '1' || $profile == '2') echo anchor('course/edit/'.$c->getId(), '<i class="mdi-content-create" title="Editar"></i>', array(
                                 'class' => 'btn'
                             ) ); ?>
                         </td>
                         <td>
-                            <?php if($this->session->user['profile'] == '1') : ?>
+                            <?php if($profile == '1') : ?>
                                 <button class="btn red" onclick="deleteConfirm('<?= site_url('course/deleteAction/'.$c->getId()); ?>')">
                                     <i class="mdi-content-clear"></i>
                                 </button>
                             <?php endif; ?>
                         </td>
-                        <?php if($this->session->user['profile'] != '1') : ?>
+                        <?php if($profile == '3') : ?>
                             <td><a class="btn" href="<?= site_url('course/addLoggedUser/'.$c->getId()); ?>">
                                     <i class="mdi-editor-mode-edit"></i>
                                 </a></td>

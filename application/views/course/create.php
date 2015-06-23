@@ -24,6 +24,8 @@ $this->load->view('_inc/header');
 
     <input type="hidden" name="id" value="<?php if(isset($course)) echo $course->getId(); ?>"/>
 
+    <input type="hidden" name="ownerUser" value="<?= $this->session->user['id']; ?>"/>
+
     <div class="row">
         <div class="input-field col s12">
             <input type="text" name="name" class="form-control" value="<?= isset($course) ?  $course->getName() : set_value('name'); ?>"/>

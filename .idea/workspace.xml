@@ -2,8 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a7c685f-e505-413d-8f03-cae3dd94ee26" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/user/_inc/teacherCourseHome.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/db/db.mwb.bak" afterPath="$PROJECT_DIR$/docs/db/db.mwb.bak" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/db/db.mwb" afterPath="$PROJECT_DIR$/docs/db/db.mwb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Entities/Course.php" afterPath="$PROJECT_DIR$/application/models/Entities/Course.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Entities/User.php" afterPath="$PROJECT_DIR$/application/models/Entities/User.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/course.php" afterPath="$PROJECT_DIR$/application/controllers/course.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/course/create.php" afterPath="$PROJECT_DIR$/application/views/course/create.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/course/edit.php" afterPath="$PROJECT_DIR$/application/views/course/edit.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user/home.php" afterPath="$PROJECT_DIR$/application/views/user/home.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/course/listing.php" afterPath="$PROJECT_DIR$/application/views/course/listing.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/knowledge/listing.php" afterPath="$PROJECT_DIR$/application/views/knowledge/listing.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="knowlegdesystem.iws" />
@@ -34,38 +43,7 @@
     <favorites_list name="knowlegdesystem" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="course.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/controllers/course.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7866287" vertical-offset="1457" max-vertical-offset="2160">
-              <caret line="139" column="0" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Course.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/Entities/Course.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-92.791664" vertical-offset="173" max-vertical-offset="2820">
-              <caret line="165" column="5" selection-start-line="165" selection-start-column="5" selection-end-line="165" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="listing.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/course/listing.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.916666" vertical-offset="287" max-vertical-offset="1020">
-              <caret line="56" column="88" selection-start-line="56" selection-start-column="88" selection-end-line="56" selection-end-column="88" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -73,7 +51,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/application/models/Base_model.php" />
         <option value="$PROJECT_DIR$/application/models/Profile_model.php" />
         <option value="$PROJECT_DIR$/application/controllers/Knowledge.php" />
         <option value="$PROJECT_DIR$/application/config/autoload.php" />
@@ -93,9 +70,7 @@
         <option value="$PROJECT_DIR$/application/views/course/addUser.php" />
         <option value="$PROJECT_DIR$/public/js/scripts.js" />
         <option value="$PROJECT_DIR$/application/models/user_model.php" />
-        <option value="$PROJECT_DIR$/application/views/course/create.php" />
         <option value="$PROJECT_DIR$/application/views/course/addKnowledge.php" />
-        <option value="$PROJECT_DIR$/application/views/course/edit.php" />
         <option value="$PROJECT_DIR$/application/models/base_model.php" />
         <option value="$PROJECT_DIR$/application/models/course_model.php" />
         <option value="$PROJECT_DIR$/application/models/Entities/Knowledge.php" />
@@ -109,21 +84,24 @@
         <option value="$PROJECT_DIR$/application/views/_inc/footer.php" />
         <option value="$PROJECT_DIR$/public/stylesheet/style.css" />
         <option value="$PROJECT_DIR$/application/views/_inc/header.php" />
-        <option value="$PROJECT_DIR$/application/models/Entities/User.php" />
         <option value="$PROJECT_DIR$/application/views/user/login.php" />
         <option value="$PROJECT_DIR$/application/config/form_validation.php" />
-        <option value="$PROJECT_DIR$/application/views/user/home.php" />
         <option value="$PROJECT_DIR$/application/controllers/admin.php" />
         <option value="$PROJECT_DIR$/application/views/_inc/adminMenu.php" />
-        <option value="$PROJECT_DIR$/application/views/knowledge/listing.php" />
         <option value="$PROJECT_DIR$/application/views/user/admin/home.php" />
         <option value="$PROJECT_DIR$/application/views/user/admin/listingUsersKnowledge.php" />
         <option value="$PROJECT_DIR$/application/controllers/user.php" />
         <option value="$PROJECT_DIR$/application/views/user/userKnowledge.php" />
         <option value="$PROJECT_DIR$/application/views/_inc/userMenu.php" />
+        <option value="$PROJECT_DIR$/application/views/user/_inc/teacherCourseHome.php" />
         <option value="$PROJECT_DIR$/application/views/course/listing.php" />
+        <option value="$PROJECT_DIR$/application/views/course/edit.php" />
+        <option value="$PROJECT_DIR$/application/models/Entities/User.php" />
         <option value="$PROJECT_DIR$/application/models/Entities/Course.php" />
+        <option value="$PROJECT_DIR$/application/views/knowledge/listing.php" />
+        <option value="$PROJECT_DIR$/application/views/course/create.php" />
         <option value="$PROJECT_DIR$/application/controllers/course.php" />
+        <option value="$PROJECT_DIR$/application/views/user/home.php" />
       </list>
     </option>
   </component>
@@ -132,9 +110,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="824" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -178,6 +155,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -358,6 +336,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_inc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="knowlegdesystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="knowledgesystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="knowledge" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -466,7 +470,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -475,7 +478,7 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="FullScreen" value="false" />
+    <property name="FullScreen" value="true" />
     <property name="SearchEverywhereHistoryKey" value="user_model&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/knowledgesystem/application/models/user_model.php&#10;kn&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/knowledgesystem/application/models/Entities/Knowledge.php&#10;know&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/knowledgesystem/application/models/knowledge_model.php&#10;li&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/knowledgesystem/application/views/knowledge/listing.php" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
@@ -499,6 +502,9 @@
       <BehatRunner />
       <method />
     </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
@@ -506,9 +512,6 @@
       <arguments />
       <pass-parent-envs>true</pass-parent-envs>
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="0" />
@@ -680,7 +683,13 @@
       <option name="project" value="LOCAL" />
       <updated>1434897229538</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Usuário pode se inscrever em um curso">
+      <created>1435022330413</created>
+      <option name="number" value="00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1435022330413</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -704,8 +713,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="824" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942554" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -713,20 +722,20 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298611" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942554" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942554" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942554" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847682" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -746,7 +755,6 @@
       <TodoPanelSettings />
     </option>
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="false" />
-    <MESSAGE value="Retirado Materilaze&#10;Adicionado Bootstrap&#10;CRUD de Knowledge iniciado - CR" />
     <MESSAGE value="Materialize adicionado novamente" />
     <MESSAGE value="edit method done" />
     <MESSAGE value="Conhecimento excluir!&#10;CRUD de conhecimento completo" />
@@ -771,7 +779,8 @@
     <MESSAGE value="Carregar cursos de um usuário logado" />
     <MESSAGE value="Controle de usuário e admin criado" />
     <MESSAGE value="Listagem de Cursos para Usuários e Admin" />
-    <option name="LAST_COMMIT_MESSAGE" value="Listagem de Cursos para Usuários e Admin" />
+    <MESSAGE value="Usuário pode se inscrever em um curso" />
+    <option name="LAST_COMMIT_MESSAGE" value="Usuário pode se inscrever em um curso" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -780,13 +789,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/libraries/Doctrine.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56179774" vertical-offset="0" max-vertical-offset="801">
-          <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/normalize/normalize.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="7.7454543" vertical-offset="0" max-vertical-offset="6480">
@@ -913,13 +915,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/course/create.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55192035" vertical-offset="167" max-vertical-offset="870">
-          <caret line="42" column="10" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/knowledge_model.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.06401138" vertical-offset="0" max-vertical-offset="703">
@@ -962,24 +957,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/course/edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.5" vertical-offset="0" max-vertical-offset="1350">
-          <caret line="33" column="57" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/course/addKnowledge.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6741573" vertical-offset="0" max-vertical-offset="801">
           <caret line="41" column="56" selection-start-line="41" selection-start-column="56" selection-end-line="41" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/db/insert.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.123796426" vertical-offset="0" max-vertical-offset="727">
-          <caret line="6" column="115" selection-start-line="6" selection-start-column="115" selection-end-line="6" selection-end-column="115" />
         </state>
       </provider>
     </entry>
@@ -994,13 +975,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.06401138" vertical-offset="0" max-vertical-offset="960">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/user/listing.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10668563" vertical-offset="0" max-vertical-offset="915">
-          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -1046,24 +1020,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/user/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="600">
-          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/_inc/adminMenu.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.49075392" vertical-offset="0" max-vertical-offset="703">
           <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/knowledge/listing.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10668563" vertical-offset="0" max-vertical-offset="1065">
-          <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -1088,14 +1048,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/Entities/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.1664295" vertical-offset="2693" max-vertical-offset="3420">
-          <caret line="83" column="30" selection-start-line="83" selection-start-column="30" selection-end-line="83" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/user.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="3.7766714" vertical-offset="0" max-vertical-offset="2925">
@@ -1117,26 +1069,97 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/user/_inc/teacherCourseHome.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21337126" vertical-offset="0" max-vertical-offset="703">
+          <caret line="10" column="73" selection-start-line="10" selection-start-column="73" selection-end-line="10" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/user/listing.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10668563" vertical-offset="0" max-vertical-offset="915">
+          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/db/insert.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Entities/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-21.875" vertical-offset="375" max-vertical-offset="3435">
+          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/knowledge/listing.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26217228" vertical-offset="0" max-vertical-offset="1005">
+          <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/course/listing.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.916666" vertical-offset="287" max-vertical-offset="1020">
-          <caret line="56" column="88" selection-start-line="56" selection-start-column="88" selection-end-line="56" selection-end-column="88" />
+        <state vertical-scroll-proportion="0.28089887" vertical-offset="0" max-vertical-offset="1080">
+          <caret line="20" column="56" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/Entities/Course.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-92.791664" vertical-offset="173" max-vertical-offset="2820">
-          <caret line="165" column="5" selection-start-line="165" selection-start-column="5" selection-end-line="165" selection-end-column="5" />
+        <state vertical-scroll-proportion="-6.25" vertical-offset="660" max-vertical-offset="3150">
+          <caret line="59" column="23" selection-start-line="59" selection-start-column="23" selection-end-line="59" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/course.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7866287" vertical-offset="1457" max-vertical-offset="2160">
-          <caret line="139" column="0" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.7303371" vertical-offset="15" max-vertical-offset="2175">
+          <caret line="45" column="42" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/course/edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.27340823" vertical-offset="294" max-vertical-offset="1395">
+          <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/course/create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37453184" vertical-offset="15" max-vertical-offset="900">
+          <caret line="26" column="80" selection-start-line="26" selection-start-column="80" selection-end-line="26" selection-end-column="80" />
+          <folding>
+            <marker date="1435090764000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435090764000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435090764000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435090764000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435090764000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435090764000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435090764000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435090764000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/user/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29962546" vertical-offset="0" max-vertical-offset="801">
+          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
           <folding />
         </state>
       </provider>

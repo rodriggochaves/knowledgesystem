@@ -53,6 +53,11 @@ $this->load->view('_inc/header');
                                 </button>
                             <?php endif; ?>
                         </td>
+                        <?php if($this->session->user['profile'] != '1') : ?>
+                            <td><a class="btn" href="<?= site_url('course/addLoggedUser/'.$c->getId()); ?>">
+                                    <i class="mdi-editor-mode-edit"></i>
+                                </a></td>
+                        <?php endif; ?>
                     </tr>
                 <?php endforeach;?>
             </tbody>

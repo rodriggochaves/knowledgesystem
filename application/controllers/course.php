@@ -121,4 +121,24 @@ class course extends CI_Controller
         $this->course_model->update($course);
         redirect('course/edit/'.$course->getId());
     }
+
+    //funçao que adiciona usuário logado no curso
+    public function addLoggedUser($id)
+    {
+        //recupera o objeto logado na sessão
+        $user = $this->user_model->findById(\Entities\User::getPath(), $this->session->user['id']);
+
+        //recupera o curso selecionado pelo usuário
+        $course = $this->course_model->findById(\Entities\Course::getPath(), $id);
+
+        //adicionar usuário no curso
+        $course->getUsers()->add($user);
+
+        //atualiza no banco
+        $this->course_model->update($course);
+        $this->user_model->update($user);
+
+        //redireciona para home do usuário
+        redirect('user/home/'.$this->session->user['id']);
+    }
 }

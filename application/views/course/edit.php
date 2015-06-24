@@ -22,65 +22,47 @@ $this->load->view('_inc/header');
 
         <?php //@todo tirar a página de adicionar e colocar um campo de texto que ajuda a preencher com js?>
 
-        <?= anchor('course/addKnowledge/'.$course->getId(), 'Adicionar conhecimentos', array(
-            'class' => 'btn'
-        )) ?>
 
-        <br/><br/>
 
-        <h5><strong>Conhecimentos</strong></h5>
-        <table>
-            <thead>
-                <th>Nome</th>
-            </thead>
-            <tbody>
-                <?php foreach($course->getCourseKnowledge() as $k) : ?>
-                <tr>
-                    <td><?= $k->getName(); ?></td>
-                </tr>
-                <?php endforeach; ?>
-            </tbody>
-        </table>
+        <div class="row">
+            <div class="col s4">
+                <ul class="collection with-header">
+                    <li class="collection-header"><h5 class="teal-text">Conhecimentos</h5></li>
+                    <?php foreach($course->getCourseKnowledge() as $k) : ?>
+                        <li class="collection-item"><?= $k->getName(); ?></li>
+                    <?php endforeach; ?>
+                </ul>
+                <br/>
+                <?= anchor('course/addKnowledge/'.$course->getId(), 'Adicionar conhecimentos', array(
+                    'class' => 'btn'
+                )) ?>
 
-        <br/>
-        <br/>
-        <br/>
+            </div>
+            <div class="col s8">
+                <ul class="collection with-header">
+                    <li class="collection-header"><h5 class="teal-text">Membros</h5></li>
+                    <?php foreach($course->getUsers() as $u) : ?>
+                        <li class="collection-item"><?= $u->getFirstName().' '.$u->getLastName(); ?>
+                            <a href="<?= site_url('/course/disapprove/'.$course->getId().'/'.$u->getId()) ?>" class="secondary-content">
+                                <i class="material-icons red-text">clear</i>
+                            </a>
+                            <a href="<?= site_url('course/approve/'.$course->getId().'/'.$u->getId()) ?>" class="secondary-content">
+                                <i class="material-icons">done_all</i>
+                            </a>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+                <?= anchor('course/addUser/'.$course->getId(), 'Adicionar membros', array(
+                    'class' => 'btn right'
+                )) ?>
+            </div>
 
-        <?= anchor('course/addUser/'.$course->getId(), 'Adicionar membros', array(
-            'class' => 'btn'
-        )) ?>
-
-        <br/><br/>
-
-        <h5><strong>Membros</strong></h5>
-        <table>
-            <thead>
-            <th>Nome</th>
-            <th>Email</th>
-            <th>Aprovar</th>
-            <th>Reprovar</th>
-            </thead>
-            <tbody>
-            <?php foreach($course->getUsers() as $u) : ?>
-                <tr>
-                    <td><?= $u->getFirstName()." ".$u->getLastName(); ?></td>
-                    <td><?= $u->getEmail(); ?></td>
-                    <td><?= anchor('course/approve/'.$course->getId().'/'.$u->getId(), '<i class="mdi-action-done-all"></i>', array(
-                            'class' => 'btn'
-                        ))?></td>
-                    <td><?= anchor('course/disapprove/'.$course->getId().'/'.$u->getId(), '<i class="mdi-action-highlight-remove"></i>', array(
-                            'class' => 'btn red'
-                        ))?></td>
-                </tr>
-            <?php endforeach; ?>
-            </tbody>
-        </table>
-
-        <br/><br/><br/>
+        </div>
 
         <!-- @todo fazer uma tela para editar o curso-->
 <!--        --><?//= anchor('course/edit/'.$course->getId(), 'Editar Curso', array(
 //            'class' => 'btn left'
+        //course/approve/'.$course->getId().'/'.$u->getId())
 //        ))?>
 
         <?= anchor('course/listing', 'Voltar para os cursos', array(

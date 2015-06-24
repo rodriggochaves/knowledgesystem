@@ -31,6 +31,12 @@ class course extends CI_Controller
         $this->load->view('course/listing', $data);
     }
 
+    public function select($id)
+    {
+        $data['course'] = $this->course_model->findById(\Entities\Course::getPath(), $id);
+        $this->load->view('course/select', $data);
+    }
+
     public function edit($id)
     {
         $data['action'] = 'course/editAction/'.$id;

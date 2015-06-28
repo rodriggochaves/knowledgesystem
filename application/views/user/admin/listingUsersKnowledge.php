@@ -12,7 +12,7 @@ $this->load->view('_inc/adminMenu');
 
 <section class="container">
 
-    <h3>Conhecimentos Aprendidos pelos Membros</h3>
+    <h3>Visão Geral da Empresa</h3>
 
     <br/><br/>
 

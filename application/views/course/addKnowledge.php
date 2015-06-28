@@ -7,6 +7,8 @@
  */
 
 $this->load->view('_inc/header');
+
+($this->session->user['profile'] == '1') ? $this->load->view('_inc/adminMenu') : $this->load->view('_inc/userMenu');
 ?>
 
 <section class="container">

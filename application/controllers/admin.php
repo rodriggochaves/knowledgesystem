@@ -19,7 +19,8 @@ class admin extends CI_Controller {
     public function index()
     {
         $this->isAdmin();
-        $this->load->view('user/admin/home');
+        $data['user'] = $this->user_model->findAll(\Entities\User::getPath());
+        $this->load->view('user/admin/listingUsersKnowledge', $data);
     }
 
     public function home($id)
@@ -33,8 +34,11 @@ class admin extends CI_Controller {
         $userdata['profileDescription'] = $this->profile_model->findById(\Entities\Profile::getPath(), $userdata['profile'])->getDescription();
         $this->session->set_userdata('user', $userdata);
 
+        //adquiri as informações sobre todos os usuários do sistema
+        $data['user'] = $this->user_model->findAll(\Entities\User::getPath());
+
         //carrega a view
-        $this->load->view('user/admin/home');
+        $this->load->view('user/admin/listingUsersKnowledge', $data);
     }
 
     //Função que verifica se o usuário logado é um admin.

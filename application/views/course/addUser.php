@@ -7,11 +7,13 @@
  */
 
 $this->load->view('_inc/header');
+
+($this->session->user['profile'] == '1') ? $this->load->view('_inc/adminMenu') : $this->load->view('_inc/userMenu');
 ?>
 
 <section class="container">
 
-    <h2><?= 'Adicinar membros em '.$course->getName(); ?></h2>
+    <h2><?= 'Adicinar Membros em '.$course->getName(); ?></h2>
 
     <br/>
 

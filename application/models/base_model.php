@@ -38,8 +38,8 @@ class Base_model extends CI_Model
 
     public function findAll($entity)
     {
-        return $this->qb->select('e')
-            ->from($entity, 'e')
+        return $this->qb->select('x')
+            ->from($entity, 'x')
             ->getQuery()
             ->getResult();
     }

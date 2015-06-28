@@ -7,6 +7,8 @@
  */
 
 $this->load->view('_inc/header');
+//carrega o menu correspondente ao perfil do usuário logado
+($this->session->user['profile'] == '1') ? $this->load->view('_inc/adminMenu') : $this->load->view('_inc/userMenu');
 ?>
 
     <section class="container">

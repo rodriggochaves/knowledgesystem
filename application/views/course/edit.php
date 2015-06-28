@@ -14,7 +14,7 @@ $this->load->view('_inc/header');
 
     <section class="container">
 
-        <h2><?= 'Curso: '.$course->getName(); ?></h2>
+        <h2><?= $course->getName(); ?></h2>
 
         <?php $this->load->view('_inc/flashMensage'); ?>
 

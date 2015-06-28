@@ -34,25 +34,6 @@ $user = $this->session->userdata('user');
             </div>
         </div>
 
-<!--        <h5>Meus Cursos</h5>-->
-<!---->
-<!--        <table>-->
-<!--            <thead>-->
-<!--                <th>Nome</th>-->
-<!--                <th>Curso</th>-->
-<!--            </thead>-->
-<!--            <tbody>-->
-<!--                --><?php //foreach($userCourses as $c) : ?>
-<!--                <tr>-->
-<!--                    <td>--><?//= $c->getName(); ?><!--</td>-->
-<!--                    <td><a href="--><?//= site_url('course/select/'.$c->getId()); ?><!--" class="btn">-->
-<!--                            <i class="material-icons">list</i>-->
-<!--                        </a></td>-->
-<!--                </tr>-->
-<!--                --><?php //endforeach; ?>
-<!--            </tbody>-->
-<!--        </table>-->
-
         <?php
             if($user['profile'] == '2') $this->load->view('user/_inc/teacherCourseHome');
         ?>

@@ -1,3 +1,24 @@
+#################
+Instruções de Uso
+#################
+
+Para visualizar o funcionamento do projeto, é necessário ter um servidor de banco de dados MySQL executando no ambiente.
+Para tal, é necessário sincronizar o banco, localizado em '/docs/db/db.mwb e rodar o scprit 'insert.sql'.
+Caso não seja possível abrir o arquivo db.mwb, é possível criar o banco com o 'complete-insert.sql' e usar novamente o 'insert.sql'.
+
+Com o 'insert.sql', é cadastrado o administrador do sistema.
+Email: admin@email.com
+Senha: 123
+
+Além disso são cadastrados dois usuários de exemplos:
+Professor:
+Email: professor@email.com
+Senha: 123
+
+Aluno:
+Email: aluno@email.com
+Senha: 123
+
 ###################
 What is CodeIgniter
 ###################
